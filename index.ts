@@ -4,9 +4,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
-import routes from "./routes";
+import routes from "./src/routes";
 
-import { dbConnection } from "./db";
+import { dbConnection } from "./src/db";
 
 const { API_VERSION, PORT } = process.env;
 
