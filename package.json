@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "nodemon index.ts",
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "build": "tsc --build",
     "setup": "npm install --legacy-peer-deps",
     "test": "echo \"Error: no test specified\" && exit 1"
