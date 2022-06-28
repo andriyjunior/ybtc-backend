@@ -20,5 +20,5 @@ app.use(cors());
 app.use(`/api/${API_VERSION}`, routes);
 
 app.listen(PORT, () => {
-  console.log(`Sever running on ${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });

@@ -1,10 +1,8 @@
-import { getUsers } from "../controllers/user";
 import { Router } from "express";
-import users from "./users.route";
+import page from "./page.route";
 
 const router = Router();
 
-router.use(users);
-// router.get("users", (req,res) => res);
+router.use(page);
 
 export = router;
