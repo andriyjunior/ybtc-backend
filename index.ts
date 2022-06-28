@@ -12,6 +12,7 @@ const { API_VERSION, PORT } = process.env;
 
 dbConnection();
 
+const port = PORT || 3000;
 const app = express();
 
 app.use(bodyParser.json());
@@ -19,6 +20,6 @@ app.use(cors());
 
 app.use(`/api/${API_VERSION}`, routes);
 
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on ${port}`);
 });
