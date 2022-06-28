@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "nodemon index.ts",
-    "build": "tcp --build",
+    "build": "tsc --build",
     "start": "vercel dev",
     "deploy": "vercel deploy --prod",
     "setup": "npm install --legacy-peer-deps"
