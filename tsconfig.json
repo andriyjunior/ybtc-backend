@@ -103,5 +103,5 @@
   "compileOnSave": true,
   "buildOnSave": true,
   "exclude": ["dist", "node_modules"],
-  "include": ["src"]
+  "include": ["src", "index.ts"]
 }
