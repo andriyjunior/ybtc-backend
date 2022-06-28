@@ -1,15 +1,15 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import dotenv from "dotenv";
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const dotenv = require("dotenv");
 dotenv.config();
 
-import routes from "./src/routes";
+const routes = require("./src/routes");
 
-import { dbConnection } from "./src/db";
+const { dbConnection } = require("./src/db/dbConnection");
 
 const { API_VERSION, PORT } = process.env;
-
+console.log(dbConnection);
 dbConnection();
 
 const port = PORT || 3000;

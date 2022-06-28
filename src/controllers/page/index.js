@@ -1,8 +1,10 @@
-import { Request, Response } from "express";
-import { Page } from "../../schemas";
-import { createErrorResponse, createSuccessResponse } from "../../utils";
+const { Page } = require("../../schemas/PageSchema");
+const {
+  createErrorResponse,
+  createSuccessResponse,
+} = require("../../utils/index");
 
-export const getPages = async (req: Request, res: Response) => {
+const getPages = async (req, res) => {
   try {
     const data = await Page.find();
 
@@ -12,7 +14,7 @@ export const getPages = async (req: Request, res: Response) => {
   }
 };
 
-export const getPage = async (req: Request, res: Response) => {
+const getPage = async (req, res) => {
   const { route } = req.params;
   try {
     const data = await Page.findOne({ route });
@@ -23,7 +25,7 @@ export const getPage = async (req: Request, res: Response) => {
   }
 };
 
-export const postPage = async (req: Request, res: Response) => {
+const postPage = async (req, res) => {
   const body = req.body;
   const { lng } = req.params;
 
@@ -42,7 +44,7 @@ export const postPage = async (req: Request, res: Response) => {
   }
 };
 
-export const patchPage = async (req: Request, res: Response) => {
+const updatePage = async (req, res) => {
   const body = req.body;
   const { route } = req.params;
 
@@ -59,4 +61,6 @@ export const patchPage = async (req: Request, res: Response) => {
   }
 };
 
-export const removePage = (req: Request, res: Response) => {};
+const removePage = (req, res) => {};
+
+module.exports = { getPage, getPages, postPage, updatePage, removePage };

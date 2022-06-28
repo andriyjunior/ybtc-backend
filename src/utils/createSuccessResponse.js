@@ -1,11 +1,9 @@
-import { ICreateResponse } from "./response.types";
-
-export const createSuccessResponse = ({
+const createSuccessResponse = ({
   res,
   data = null,
   status = 200,
   message = "Succesful",
-}: ICreateResponse) => {
+}) => {
   switch (status) {
     case 200:
       return res.status(status).send({ data, message, success: true });
@@ -29,3 +27,5 @@ export const createSuccessResponse = ({
       break;
   }
 };
+
+module.exports = { createSuccessResponse };

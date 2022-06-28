@@ -1,6 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+const mongoose = require("mongoose");
 
-const pageSchema = new Schema(
+const pageSchema = new mongoose.Schema(
   {
     route: { type: String, required: true, unique: true },
     meta: {
@@ -25,4 +25,4 @@ const pageSchema = new Schema(
 
 const Page = mongoose.model("page", pageSchema);
 
-export { Page };
+module.exports = { Page };

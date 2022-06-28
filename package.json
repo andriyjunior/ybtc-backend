@@ -2,12 +2,11 @@
   "name": "ybtc-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.ts",
+    "dev": "nodemon index.js",
     "build": "tsc --build",
-    "start": "vercel dev",
-    "deploy": "vercel deploy --prod",
+    "start": "node index.js",
     "setup": "npm install --legacy-peer-deps"
   },
   "author": "",
