@@ -3,3 +3,4 @@ dist
 .history
 
 .env
+.vercel

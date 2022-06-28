@@ -4,21 +4,23 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
-import routes from "./routes";
+import routes from "./src/routes";
 
-import { dbConnection } from "./db";
+import { dbConnection } from "./src/db";
 
 const { API_VERSION, PORT } = process.env;
 
 dbConnection();
 
+const port = PORT || 3000;
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get(`/`, (req, res) => res.send({ text: "HEllo!" }));
 app.use(`/api/${API_VERSION}`, routes);
 
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on ${port}`);
 });
