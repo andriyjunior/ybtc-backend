@@ -20,7 +20,8 @@
     "express": "^4.18.1",
     "mongoose": "^6.3.3",
     "node-telegram-bot-api": "^0.58.0",
-    "telegram-notify": "^1.3.3"
+    "telegram-notify": "^1.3.3",
+    "vercel": "^25.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
