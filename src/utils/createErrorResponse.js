@@ -1,11 +1,4 @@
-import { ICreateResponse } from "./response.types";
-
-export const createErrorResponse = ({
-  res,
-  err = null,
-  status = 400,
-  message,
-}: ICreateResponse) => {
+const createErrorResponse = ({ res, err = null, status = 400, message }) => {
   switch (status) {
     case 400:
       return res.status(status).send({
@@ -32,3 +25,5 @@ export const createErrorResponse = ({
       break;
   }
 };
+
+module.exports = { createErrorResponse };
