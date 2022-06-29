@@ -25,4 +25,4 @@ const pageSchema = new mongoose.Schema(
 
 const Page = mongoose.model("page", pageSchema);
 
-module.exports = { Page };
+module.exports = Page;

@@ -26,4 +26,4 @@ const createErrorResponse = ({ res, err = null, status = 400, message }) => {
   }
 };
 
-module.exports = { createErrorResponse };
+module.exports = createErrorResponse;

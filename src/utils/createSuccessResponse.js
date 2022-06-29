@@ -27,4 +27,4 @@ const createSuccessResponse = ({
       break;
   }
 };
-module.exports = { createSuccessResponse };
+module.exports = createSuccessResponse;

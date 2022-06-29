@@ -1,3 +1,3 @@
-const pageSchema = require("./PageSchema");
+const Page = require("./PageSchema");
 
-module.exports = { pageSchema };
+module.exports = { Page };
