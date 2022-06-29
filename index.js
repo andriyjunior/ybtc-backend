@@ -4,9 +4,9 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const routes = require("./routes");
+const routes = require("./src/routes");
 
-const { dbConnection } = require("./db");
+const { dbConnection } = require("./src/db");
 
 const { API_VERSION, PORT } = process.env;
 
