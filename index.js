@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get(`/`, (req, res) => res.send({ text: "HEllo!" }));
-app.use(`/api/${API_VERSION}`, routes);
+app.use(`/api`, routes);
 
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
