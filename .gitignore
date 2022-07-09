@@ -1,6 +1,7 @@
 node_modules
 dist
 .history
+package-lock.json
 
 .env
 .vercel

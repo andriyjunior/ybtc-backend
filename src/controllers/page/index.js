@@ -24,12 +24,11 @@ const getPage = async (req, res) => {
 
 const postPage = async (req, res) => {
   const body = req.body;
-  const { lng } = req.params;
 
   const newPage = new Page(body);
 
   try {
-    const response = await newPage.save();
+    const data = await newPage.save();
 
     createSuccessResponse({
       res,
@@ -46,7 +45,7 @@ const putPage = async (req, res) => {
   const { route } = req.params;
 
   try {
-    const response = await Page.findOneAndUpdate({ route }, body);
+    const data = await Page.findOneAndUpdate({ route }, body);
 
     createSuccessResponse({
       res,
