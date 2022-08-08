@@ -14,6 +14,13 @@ const createErrorResponse = ({ res, err = null, status = 400, message }) => {
         success: false,
       });
 
+    case 404:
+      return res.status(status).send({
+        err,
+        message: message ? message : "Not found",
+        success: false,
+      });
+
     case 500:
       return res.status(status).send({
         err,
@@ -22,7 +29,11 @@ const createErrorResponse = ({ res, err = null, status = 400, message }) => {
       });
 
     default:
-      break;
+      return res.send({
+        err,
+        message: message ? message : "Something went wrong",
+        success: false,
+      });
   }
 };
 

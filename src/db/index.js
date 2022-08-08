@@ -1,3 +1,3 @@
-const dbConnection = require("./dbConnection");
+const db = require("./db");
 
-module.exports = { dbConnection };
+module.exports = { db };
